@@ -21,7 +21,8 @@ a{color:inherit;text-decoration:none}
 .topbar a{font-weight:700}
 .site-header{background:rgba(255,255,255,.96);border-bottom:1px solid #e8ebe5;position:sticky;top:0;z-index:20;backdrop-filter:blur(12px)}
 .nav-wrap{height:88px;display:flex;align-items:center;justify-content:space-between}
-.brand img{display:block;width:190px;max-height:70px;object-fit:contain}
+.brand{display:flex;align-items:center;justify-content:center;min-width:220px}
+.brand svg{display:block;width:220px;height:auto;max-height:72px}
 .nav{display:flex;align-items:center;gap:28px;font-weight:600;font-size:14px}
 .nav a{color:#334038}
 .nav a:hover{color:var(--green)}
@@ -127,7 +128,7 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
   .nav{gap:15px}
   .nav a:not(.nav-quote){display:none}
   .menu-toggle{display:block;color:var(--green)}
-  .nav{position:absolute;right:20px;top:78px;background:white;border:1px solid var(--line);padding:12px;display:none;flex-direction:column;align-items:stretch;min-width:190px;box-shadow:0 18px 40px rgba(24,36,29,.12)}
+  .nav{position:absolute;right:20px;top:78px;background:white;border:1px solid var(--line);padding:12px;display:none;flex-direction:column;align-items:stretch;min-width:190px;box-shadow:0 18px 40px rgba(17,26,21,.08)}
   .nav.open{display:flex}
   .nav.open a:not(.nav-quote){display:block;padding:9px}
   .service-grid{grid-template-columns:1fr 1fr}
@@ -138,7 +139,7 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
 @media(max-width:620px){
   .container{width:min(100% - 28px,1160px)}
   .topbar-inner{font-size:11px}
-  .brand img{width:155px}
+  .brand svg{width:180px}
   .nav-wrap{height:78px}
   .hero{min-height:650px}
   .hero-content{padding:70px 0}
@@ -194,7 +195,40 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
   <header class="site-header">
     <div class="container nav-wrap">
       <a class="brand" href="#home" aria-label="McAndrews Garden Oasis home">
-        <img src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?auto=format&fit=crop&w=600&q=80" alt="McAndrews Garden Oasis logo">
+        <svg viewBox="0 0 760 360" role="img" aria-label="McAndrews Garden Oasis logo" xmlns="http://www.w3.org/2000/svg">
+          <defs>
+            <path id="arc" d="M 130 185 A 170 170 0 0 1 630 185" />
+          </defs>
+
+          <g transform="translate(42,18)">
+            <rect x="70" y="34" width="270" height="240" rx="28" fill="none" stroke="#2E9D66" stroke-width="12"/>
+            <path d="M176 180 C 145 152, 120 154, 110 129 C 136 120, 164 129, 182 151 C 197 136, 215 124, 233 122 C 234 147, 220 169, 176 180 Z" fill="#3AAE64"/>
+            <path d="M203 152 C 188 107, 187 81, 226 69 C 244 111, 238 136, 203 152 Z" fill="#3AAE64"/>
+            <path d="M233 175 C 202 143, 186 123, 198 84 C 234 91, 270 123, 257 176 C 248 180, 240 179, 233 175 Z" fill="#3AAE64"/>
+            <path d="M155 193 C 205 176, 259 176, 303 190 C 278 222, 228 234, 175 220 C 168 210, 164 201, 155 193 Z" fill="#3AAE64"/>
+            <path d="M173 167 L 208 142" stroke="#2E9D66" stroke-width="12" stroke-linecap="round"/>
+            <path d="M235 159 L 272 140" stroke="#2E9D66" stroke-width="12" stroke-linecap="round"/>
+            <path d="M205 206 L 229 233" stroke="#2E9D66" stroke-width="10" stroke-linecap="round"/>
+            <path d="M228 185 L 286 213" stroke="#2E9D66" stroke-width="10" stroke-linecap="round"/>
+            <path d="M165 200 L 129 230" stroke="#2E9D66" stroke-width="10" stroke-linecap="round"/>
+            <path d="M118 145 L 82 175" stroke="#2E9D66" stroke-width="10" stroke-linecap="round"/>
+            <path d="M149 102 L 110 80" stroke="#2E9D66" stroke-width="10" stroke-linecap="round"/>
+            <path d="M238 102 L 272 73" stroke="#2E9D66" stroke-width="10" stroke-linecap="round"/>
+          </g>
+
+          <g transform="translate(48,0)">
+            <text x="350" y="160" text-anchor="middle" font-size="76" font-family="'DM Sans', Arial, sans-serif" font-weight="700" fill="#2D9A63" letter-spacing="-3">McAndrews</text>
+            <text x="350" y="228" text-anchor="middle" font-size="78" font-family="'DM Sans', Arial, sans-serif" font-weight="700" fill="#2D9A63" letter-spacing="-3">Garden Oasis</text>
+            <text x="350" y="280" text-anchor="middle" font-size="34" font-family="'DM Sans', Arial, sans-serif" font-weight="700" fill="#2D9A63" letter-spacing="2">267-469-7346</text>
+          </g>
+
+          <g transform="translate(0,0)">
+            <path d="M 18 246 A 214 214 0 0 1 330 246" fill="none" />
+            <text font-size="26" font-family="'DM Sans', Arial, sans-serif" font-weight="700" fill="#2D9A63" letter-spacing="3">
+              <textPath href="#arc" startOffset="50%" text-anchor="middle">TILE INSTALLATIONS</textPath>
+            </text>
+          </g>
+        </svg>
       </a>
       <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">☰</button>
       <nav class="nav">
@@ -233,7 +267,7 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
           <h2>From one replacement tile to a complete room.</h2>
         </div>
         <div>
-          <p>Whether you're refreshing a small bathroom, replacing a damaged section, or transforming a kitchen floor, McAndrews Garden Oasis provides focused tile installation and repair with attention to detail, practical finishes, and a clean final result.</p>
+          <p>Whether you're refreshing a small bathroom, replacing a damaged section, or transforming a kitchen floor, McAndrews Garden Oasis provides focused tile installation and repair with attention to detail and craftsmanship.</p>
           <a class="text-link" href="#quote">Tell us about your project <span>→</span></a>
         </div>
       </div>
@@ -307,7 +341,7 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
           </div>
         </div>
         <div class="feature-panel">
-          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1000&q=80" alt="Tile project detail" style="width:100%;height:100%;object-fit:cover;border-radius:18px;display:block;">
+          <img src="https://images.unsplash.com/photo-1523217582562-09d0def993a6?auto=format&fit=crop&w=1000&q=80" alt="Tile project detail" style="width:100%;height:100%;object-fit:cover;border-radius:22px;min-height:400px;" />
         </div>
       </div>
     </section>
@@ -346,12 +380,12 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
     <section id="about" class="about section">
       <div class="container about-grid">
         <div class="about-mark">
-          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Tile craftsmanship" style="border-radius:18px;object-fit:cover;max-height:330px;">
+          <img src="https://images.unsplash.com/photo-1556911220-bff31c812dba?auto=format&fit=crop&w=900&q=80" alt="Tile craftsmanship" style="border-radius:18px;object-fit:cover;max-height:330px;" />
         </div>
         <div>
           <p class="section-kicker">ABOUT</p>
           <h2>Built around craftsmanship and practical results.</h2>
-          <p>McAndrews Garden Oasis focuses on tile installation and repair work that improves the way a room looks and functions. The process is straightforward, the finish is clean, and the end result is built around real life: daily use, easy care, and a polished look that feels intentional.</p>
+          <p>McAndrews Garden Oasis focuses on tile installation and repair work that improves the way a room looks and functions. The process is straightforward, the finish is clean, and the end result is built for the way you live.</p>
           <div class="about-points">
             <span>Bathroom tile</span>
             <span>Kitchen backsplashes</span>
@@ -402,7 +436,6 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
           </div>
         </div>
         <form class="quote-form" action="https://formsubmit.co/christianmcandrewszg@yahoo.com" method="POST">
-          <!-- FormSubmit will email submissions to christianmcandrewszg@yahoo.com after the email address is confirmed. -->
           <input type="hidden" name="_subject" value="New quote request — McAndrews Garden Oasis">
           <input type="hidden" name="_captcha" value="false">
           <input type="text" name="_honey" style="display:none">
@@ -504,8 +537,6 @@ footer{background:#101a15;color:#bdc8c1;padding:55px 0 25px}
         menuToggle.setAttribute('aria-expanded', String(isOpen));
       });
     }
-
-    // Allow normal form submission so FormSubmit or Netlify can process the POST and send email.
 
     const galleryItems = document.querySelectorAll('.work-item, .service-card.visual');
     const modal = document.querySelector('.gallery-modal');
